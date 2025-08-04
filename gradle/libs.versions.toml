@@ -8,6 +8,7 @@ backend-version = "1.0.0"
 
 [libraries]
 spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springBoot" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springBoot" }
 
 [plugins]
 kotlin-compiler = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
