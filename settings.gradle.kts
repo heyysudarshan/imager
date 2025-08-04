@@ -36,3 +36,4 @@ dependencyResolutionManagement {
 
 include(":backend")
 include(":compose-app")
+include(":android-app")
