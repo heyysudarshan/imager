@@ -1,5 +1,6 @@
 package imager.frontend.shared.service
 
+import android.content.Context
 import android.net.Uri
 import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResultLauncher
@@ -10,7 +11,7 @@ object AndroidPhotoPickerService  {
 
     private var photoPickerLauncher: ActivityResultLauncher<PickVisualMediaRequest>? = null
 
-    private var onPhotoPicked: (Uri) -> Unit = {}
+    private var onPhotoPicked: (ByteArray) -> Unit = {}
     private var onPhotoPickerError: () -> Unit = {}
 
     fun initialize(activity: ComponentActivity) {
@@ -18,7 +19,11 @@ object AndroidPhotoPickerService  {
             contract = ActivityResultContracts.PickVisualMedia()
         ) { uri ->
             if (uri != null) {
-                onPhotoPicked(uri)
+                val uriByteArray = convertUriToByteArray(
+                    context = activity.applicationContext,
+                    uri = uri
+                )
+                onPhotoPicked(uriByteArray)
             } else {
                 onPhotoPickerError()
             }
@@ -26,7 +31,7 @@ object AndroidPhotoPickerService  {
     }
 
     internal fun pickPhoto(
-        onPhotoPicked: (Uri) -> Unit,
+        onPhotoPicked: (ByteArray) -> Unit,
         onPhotoPickerError: () -> Unit
     ) {
         this.onPhotoPicked = onPhotoPicked
@@ -36,5 +41,9 @@ object AndroidPhotoPickerService  {
                 mediaType = ActivityResultContracts.PickVisualMedia.ImageOnly
             )
         )
+    }
+
+    private fun convertUriToByteArray(context: Context, uri: Uri): ByteArray {
+        return context.contentResolver.openInputStream(uri)?.use { it.readBytes() } ?: ByteArray(0)
     }
 }
