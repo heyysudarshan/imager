@@ -1,7 +1,10 @@
 package imager.frontend.shared.service
 
 internal object ImageRequestorService {
-    fun getImageFromUserDevice(): ByteArray {
-        return requestImage()
+    fun getImageFromUserDevice(
+        onPhotoPicked: (ByteArray) -> Unit,
+        onPhotoPickerError: () -> Unit
+    ) {
+        requestImage(onPhotoPicked = onPhotoPicked, onPhotoPickerError = onPhotoPickerError)
     }
 }
