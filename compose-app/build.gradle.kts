@@ -21,6 +21,12 @@ kotlin {
             isStatic = true
         }
     }
+
+    sourceSets {
+        commonMain.dependencies {
+            implementation(libs.compose.multiplatform.ui)
+        }
+    }
 }
 
 android {
