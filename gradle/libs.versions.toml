@@ -4,6 +4,7 @@ kotlin = "2.2.0"
 agp = "8.11.1"
 springBoot = "3.5.4"
 kotlinxSerialization = "1.9.0"
+composeMultiplatform = "1.8.2"
 
 # compose-app module's android library package information
 composeApp-androidLibrary-namespace = "imager.frontend.shared"
@@ -27,5 +28,6 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 kotlin-compiler = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 spring-boot = { id = "org.springframework.boot", version.ref = "springBoot" }
 kotlin-spring-boot = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
