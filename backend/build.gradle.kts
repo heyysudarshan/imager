@@ -21,5 +21,9 @@ kotlin.compilerOptions {
     jvmTarget = JvmTarget.JVM_21
 }
 
+dependencies {
+    implementation(libs.spring.boot.starter)
+}
+
 // Custom build directory
 layout.buildDirectory.set(file(path = "$rootDir/.build/Backend"))
