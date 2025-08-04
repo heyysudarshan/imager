@@ -1,6 +1,7 @@
 [versions]
 kotlin = "2.2.0"
 springBoot = "3.5.4"
+kotlinxSerialization = "1.9.0"
 
 # backend module configuration information
 backend-group = "imager.backend.app"
@@ -9,6 +10,7 @@ backend-version = "1.0.0"
 [libraries]
 spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springBoot" }
 spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springBoot" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
 [plugins]
 kotlin-compiler = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
