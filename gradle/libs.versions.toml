@@ -1,5 +1,6 @@
 [versions]
 kotlin = "2.2.0"
+springBoot = "3.5.4"
 
 # backend module configuration information
 backend-group = "imager.backend.app"
@@ -9,3 +10,4 @@ backend-version = "1.0.0"
 
 [plugins]
 kotlin-compiler = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+spring-boot = { id = "org.springframework.boot", version.ref = "springBoot" }
