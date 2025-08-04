@@ -1,6 +1,6 @@
 package imager.frontend.shared.service
 
-internal class ImageRequestorService {
+internal object ImageRequestorService {
     fun getImageFromUserDevice(): ByteArray {
         return requestImage()
     }
