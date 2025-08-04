@@ -1,6 +1,10 @@
 [versions]
 kotlin = "2.2.0"
 
+# backend module configuration information
+backend-group = "imager.backend.app"
+backend-version = "1.0.0"
+
 [libraries]
 
 [plugins]
