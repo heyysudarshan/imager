@@ -18,5 +18,14 @@ kotlin {
     }
 }
 
+android {
+    namespace = libs.versions.composeApp.androidLibrary.namespace.get()
+    compileSdk = libs.versions.composeApp.androidLibrary.compileSdk.get().toInt()
+
+    defaultConfig {
+        minSdk = libs.versions.composeApp.androidLibrary.minSdk.get().toInt()
+    }
+}
+
 // Custom build directory
 layout.buildDirectory.set(file(path = "$rootDir/.build/ComposeApp"))
