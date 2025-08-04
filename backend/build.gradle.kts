@@ -22,7 +22,6 @@ kotlin.compilerOptions {
 }
 
 dependencies {
-    implementation(libs.kotlinx.serialization.json)
     implementation(libs.spring.boot.starter.web)
     implementation(libs.spring.boot.starter)
 }
