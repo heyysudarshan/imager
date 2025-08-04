@@ -35,3 +35,4 @@ dependencyResolutionManagement {
 }
 
 include(":backend")
+include(":compose-app")
