@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlin.compiler)
     alias(libs.plugins.spring.boot)
+    alias(libs.plugins.kotlin.spring.boot)
 }
 
 group = libs.versions.backend.group.get()
