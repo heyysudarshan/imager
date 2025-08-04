@@ -1,10 +1,20 @@
 [versions]
+# Library and plugin versions
 kotlin = "2.2.0"
 agp = "8.11.1"
 springBoot = "3.5.4"
 kotlinxSerialization = "1.9.0"
 
-# backend module configuration information
+# compose-app module's android library package information
+composeApp-androidLibrary-namespace = "image.frontend.shared"
+composeApp-androidLibrary-compileSdk = "36"
+composeApp-androidLibrary-minSdk = "24"
+
+# compose-app module's configuration information
+composeApp-group = "image.frontend.shared"
+composeApp-version = "1.0.0"
+
+# backend module's configuration information
 backend-group = "imager.backend.app"
 backend-version = "1.0.0"
 
