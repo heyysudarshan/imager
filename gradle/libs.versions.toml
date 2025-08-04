@@ -7,6 +7,19 @@ springBoot = "3.5.4"
 kotlinxSerialization = "1.9.0"
 composeMultiplatform = "1.8.2"
 
+# android-app module's android app package information
+androidApp-namespace = "imager.android.app"
+androidApp-compileSdk = "36"
+androidApp-applicationId = "imager.android.app"
+androidApp-minSdk = "24"
+androidApp-targetSdk = "36"
+androidApp-versionCode = "1"
+androidApp-versionName = "1.0.0"
+
+# android-app module's configuration information
+androidApp-group = "imager.android.app"
+androidApp-version = "1.0.0"
+
 # compose-app module's android library package information
 composeApp-androidLibrary-namespace = "imager.frontend.shared"
 composeApp-androidLibrary-compileSdk = "36"
