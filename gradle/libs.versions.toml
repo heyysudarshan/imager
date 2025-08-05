@@ -7,7 +7,7 @@ springBoot = "3.5.4"
 kotlinxSerialization = "1.9.0"
 composeMultiplatform = "1.8.2"
 lifecycleViewmodelCompose = "2.9.1"
-kamelImage = "0.4.1"
+kamelImage = "1.0.7"
 
 # android-app module's android app package information
 androidApp-namespace = "imager.android.app"
@@ -44,7 +44,7 @@ lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifec
 spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springBoot" }
 spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springBoot" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
-kamel-image = { module = "com.alialbaali.kamel:kamel-image", version.ref = "kamelImage" }
+kamel-image = { module = "media.kamel:kamel-image", version.ref = "kamelImage" }
 
 [plugins]
 kotlin-compiler = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
