@@ -9,3 +9,21 @@
 
 # Build output folder
 .build
+
+# Local properties
+local.properties
+
+*.iml
+**/build/
+xcuserdata
+!src/**/build/
+.DS_Store
+captures
+.externalNativeBuild
+.cxx
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
