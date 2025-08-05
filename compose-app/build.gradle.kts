@@ -27,13 +27,11 @@ kotlin {
             implementation(libs.activity.compose)
         }
         commonMain.dependencies {
+            implementation(libs.kamel.image)
             implementation(libs.lifecycle.viewmodel.compose)
             implementation(libs.compose.multiplatform.material3)
             implementation(libs.compose.multiplatform.ui)
             implementation(libs.compose.multiplatform.foundation)
-        }
-        iosMain.dependencies {
-            implementation(libs.kamel.image)
         }
     }
 }
