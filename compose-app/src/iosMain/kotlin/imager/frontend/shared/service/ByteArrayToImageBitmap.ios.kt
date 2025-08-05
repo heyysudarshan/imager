@@ -3,7 +3,10 @@ package imager.frontend.shared.service
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.toComposeImageBitmap
 import kotlinx.cinterop.ExperimentalForeignApi
+import kotlinx.cinterop.UByteVar
 import kotlinx.cinterop.addressOf
+import kotlinx.cinterop.get
+import kotlinx.cinterop.reinterpret
 import kotlinx.cinterop.usePinned
 import org.jetbrains.skia.ColorAlphaType
 import org.jetbrains.skia.ColorSpace
@@ -62,7 +65,7 @@ private fun UIImage.toSkiaImage(): Image? {
     }
 
     val byteArray = ByteArray(length.toInt()) { index ->
-        bytePointer!![index].toByte()
+        bytePointer?.get(index)?.toByte()!!
     }
 
     CFRelease(data)
